@@ -28,5 +28,6 @@ Now you can authenticate via MetaMask as long as you have the MetaMask browser e
 
 ## Running the frontend
 
-- `cd` to `./client` and run `npm run dev` to start the next.js app
+- `cd` to `./client` and run `npm run dev` to start the next.js app on port 3000
   - login is at `localhost:3000/signin`
+  
