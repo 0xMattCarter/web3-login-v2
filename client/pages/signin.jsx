@@ -53,11 +53,9 @@ function SignIn() {
 
       localStorage.setItem('currentUid', user.objectId);
 
-      //   await doALink('0xdcFcDdDfdccf0882E8149ad9de3b112B8a55258d', chain, user.objectId);
-
       return;
 
-      // Not working, i think it has something to do with the linking
+      // @dev Was working from clone, not working now, i think it has something to do with the linking, unsure
 
       // redirect user after success authentication to '/user' page
       const { url } = await signIn(
@@ -74,7 +72,6 @@ function SignIn() {
        * instead of using signIn(..., redirect: "/user")
        * we get the url from callback and push it to the router to avoid page refreshing
        */
-      console.log(url);
       push(url);
     };
     if (status === 'unauthenticated' && isConnected) {
@@ -87,7 +84,6 @@ function SignIn() {
       <h3>Web3 Authentication</h3>
       <ConnectButton />
       <LinkButton />
-      {/* <button onClick={doALink()}></button> */}
     </div>
   );
 }
